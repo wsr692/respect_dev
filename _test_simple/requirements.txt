@@ -1,0 +1,8 @@
+matplotlib==2.2.3
+mpld3==0.3
+mpltools==0.2.0
+numpy==1.14.1
+pandas==0.22.0
+scikit-learn==0.19.1
+scikit-optimize==0.5.2
+scipy==1.1.0
