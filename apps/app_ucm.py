@@ -9,7 +9,6 @@ import dash_core_components as dcc
 import dash_html_components as html
 from dash.dependencies import Input, Output
 import plotly.graph_objs as go
-import video_engine as rpd
 from app import app
 
 import numpy as np
@@ -275,18 +274,6 @@ layout = html.Div([
         ),
         html.Div(id='app1-display-value'),
     ], style=col_slider_style),
-
-    html.Div(children=rpd.my_Player(
-        id = 'video_player',
-        url = 'http://127.0.0.1:8080/testvideo.mp4',
-        width = 900,
-        height = 720,
-        controls = True,
-        playing = False,
-        seekTo = 0,
-        volume = 1 ),
-        style={'textAlign': 'center',
-                'margin': 'auto'}),
 
     html.Br(),
 
