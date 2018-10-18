@@ -9,7 +9,9 @@ NAMZ
 import os
 import sys
 import numpy as np
-import soundfile as sf
+#import soundfile as sf
+from scipy.io import wavfile
+
 import matplotlib.pyplot as plt
 
 from mpl_toolkits.mplot3d import axes3d
@@ -20,7 +22,8 @@ class data_process(object):
         print("Importing audio file and parameters.")
         self.param = parameters
         self.data = self.param['data']
-        self.signal, self.Fs = sf.read(self.data)
+        #self.signal, self.Fs = sf.read(self.data)
+        self.Fs, self.signal = wavfile.read(self.data)
         if self.signal.shape[0] == 0:
             print("Audio file is not imported.")
             exit()
